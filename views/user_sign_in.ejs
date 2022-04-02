@@ -1,0 +1,60 @@
+<!-- <h1>Sign In</h1>
+
+<form action="/users/create-session" method="POST">
+    <input type="email" name="email" placeholder="Email"  required>
+    <input type="password" name="password" placeholder="Password"  required>
+    <input type="submit" value="Sign In">
+
+</form> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css" integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+    <div id="id01" class="modal">
+      
+      <form class="modal-content animate" action="/users/create-session" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="/images/avatar.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="email"><b>Email</b></label>
+          <input type="email" name="email" placeholder="Email"  required>
+
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+            
+          <button type="submit">Login</button>
+          
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+
+
+    <script src="/js/signin.js"></script>
+
+</body>
+</html>

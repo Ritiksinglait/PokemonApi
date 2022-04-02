@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+      .li {
+        list-style: none; 
+        display: inline;
+      }
+      .links{
+          margin-left: 10px ;
+          margin-right: 10px;
+          /* display: flex;
+          justify-content: space-between; */
+      }
+      #img{
+        border-radius: 50%;
+        /* width:"30px";
+        height:"30px"; */
+      }
+      a{
+       
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+<!--     
+    <header>
+      <div>
+        <nav class="navbar  bg-dark">
+          <div class="container-fluid bg-warning">
+            <a class="navbar-brand" href="#">
+              <img
+                id="img"
+                src="/images/background.jpg"
+                alt=""
+                width="50"
+                height="60"
+                class="d-inline-block align-text-top"
+              >
+              Pika Pika
+            </a>
+            <% if (locals.user){ %>
+                <li class="li">
+                    <a href="/users/profile" class="links"> <%= user.name %> </a>
+                </li  >
+                <li class="li">
+                    <a href="/users/sign-out" class="links">Sign Out</a>
+                </li>
+            <% }else{ %>
+
+                <li class="li">
+                <a href="/users/sign-in" class="links">Sign In</a>
+                </li>
+
+                <li class="li">
+                <a href="/users/sign-up" class="links">Sign Up</a>
+                </li>
+
+            <% } %>
+          </div>
+        </nav>
+      </div>
+    </header> -->
+
+    
+<div>
+  <nav class=" dark:bg-gray-800  shadow " style="background: rgb(255,145,0);
+  background: linear-gradient(174deg, rgba(255,145,0,1) 32%, rgba(255,243,0,1) 100%);">
+      <div class="max-w-7xl mx-auto px-8">
+          <div class="flex items-center justify-between h-16">
+              <div class="w-full justify-between flex items-center">
+                  <a class="flex-shrink-0" href="/">
+                      <img class="h-10 w-10" id="img" src="/images/background.jpg" alt="Workflow"/>
+                  </a>
+                  <div class="hidden md:block">
+                      <div class="ml-10 flex items-baseline space-x-4">
+                          <!-- <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
+                              Home
+                          </a>
+                          <a class="text-gray-800 dark:text-white  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
+                              Gallery
+                          </a>
+                          <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
+                              Content
+                          </a>
+                          <a class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="/#">
+                              Contact
+                          </a> -->
+                          <% if (locals.user){ %>
+                            <li class="li">
+                                <a href="/users/profile" class="links"> <%= user.name %> </a>
+                            </li  >
+                            <li class="li">
+                                <a href="/users/sign-out" class="links">Sign Out</a>
+                            </li>
+                        <% }else{ %>
+            
+                            <li class="li">
+                            <a href="/users/sign-in" class="links">Sign In</a>
+                            </li>
+            
+                            <li class="li">
+                            <a href="/users/sign-up" class="links">Sign Up</a>
+                            </li>
+            
+                        <% } %>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+      
+  </nav>
+</div>
+
+
+
+
+
+
+
+  </body>
+</html>
